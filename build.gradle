@@ -15,6 +15,20 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	// Lombok
+	compileOnly 'org.projectlombok:lombok:1.18.4'
+	annotationProcessor 'org.projectlombok:lombok:1.18.4'
+
+	// SpringBoot annotation processor
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+	// JPA
+	compile("org.springframework.boot:spring-boot-starter-data-jpa")
+
+	// JDBC
+	compile 'org.postgresql:postgresql'
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
