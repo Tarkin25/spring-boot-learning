@@ -1,0 +1,3 @@
+task pluginTask {
+    println 'This was executed via plugin.'
+}

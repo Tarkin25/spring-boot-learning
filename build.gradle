@@ -3,7 +3,10 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 	id 'war'
+	id 'org.sonarqube' version '2.7.1'
 }
+
+apply from: 'myPlugin.gradle'
 
 group = 'ch.noseryoung'
 version = '0.0.1'
