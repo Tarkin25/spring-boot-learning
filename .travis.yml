@@ -1,1 +1,12 @@
 language: java
+sudo: false
+install: false
+
+addons:
+  sonarcloud:
+    organization: "tarkin25-1"
+    token:
+      secure: 'd1abcec7eb4fd7cc882545003a40899fc67987ab' # encrypted value of your token
+
+script:
+  - sonar-scanner
