@@ -40,6 +40,6 @@ dependencies {
 
 sonarqube {
 	properties {
-		sonar.projectKey Tarkin25_spring-boot-learning
+		property 'sonar.projectKey', 'Tarkin25_spring-boot-learning'
 	}
 }
