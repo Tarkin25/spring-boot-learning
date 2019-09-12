@@ -37,6 +37,16 @@ dependencies {
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
+
+	// AssertJ
+	testImplementation "org.assertj:assertj-core:3.13.2"
+	// H2 Database Engine
+	testImplementation "com.h2database:h2:1.4.199"
+	// mockito
+	testImplementation "org.mockito:mockito-core:3.0.0"
+
+	// JWT
+	compile "io.jsonwebtoken:jjwt:0.7.0"
 }
 
 sonarqube {
