@@ -1,7 +1,7 @@
 package ch.noseryoung.learning.config.security;
 
-import ch.noseryoung.artistmgmt.domain.user.User;
-import ch.noseryoung.artistmgmt.domain.user.UserDetailsImpl;
+import ch.noseryoung.learning.domain.user.User;
+import ch.noseryoung.learning.domain.user.UserDetailsImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -36,7 +36,7 @@ public class JWTAuthenticationFilter extends AbstractAuthenticationProcessingFil
 
             User user = mapper.readValue(request.getInputStream(), User.class);
 
-            return getAuthenticationManager().authenticate(new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword()));
+            return getAuthenticationManager().authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
